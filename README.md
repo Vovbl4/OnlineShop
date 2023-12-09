@@ -8,3 +8,5 @@ On web-site:
   -Login/Register (just basic login/register stuff)
   -Blog (Read the other users blogs)
   -Add Blog (Create yourself a blog)
+
+![Site_Sample](https://github.com/Vovbl4/OnlineShop/assets/146021097/5cc126ce-6683-4be2-bf04-2c0509ac8e05)
