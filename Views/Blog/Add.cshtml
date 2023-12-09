@@ -1,0 +1,25 @@
+﻿@model Blog
+
+@{
+    ViewData["Title"] = "Add post in the site blog form";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="item order">
+    <form method="post" asp-controller="Blog" asp-action="Add">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" />
+        <span asp-validation-for="Title" class="error"></span>
+
+        <label asp-for="Anons"></label>
+        <input asp-for="Anons" />
+        <span asp-validation-for="Anons" class="error"></span>
+
+        <label asp-for="FullText"></label>
+        <input asp-for="FullText" />
+        <span asp-validation-for="FullText" class="error"></span>
+
+        <input type="submit" value="Add post" />
+    </form>
+</div>

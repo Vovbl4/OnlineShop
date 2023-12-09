@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - MyWebSiteMVC</title>
+    <link rel="stylesheet" href="~/css/site.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <a class="logo" asp-controller="Home" asp-action="Index">Cool Shop</a>
+        <nav>
+            <a href="/home/about">About us</a>
+            <a href="/blog/index">Blog</a>
+            <a href="/blog/add">Add blog</a>
+            <partial name="_LoginPartial"/>
+        </nav>
+    </header>
+
+    <nav>
+        <a href="/">ALl</a>
+        <a href="/home/Potatoes">Potatoes</a>
+        <a href="/home/Napkins">Napkins</a>
+        <a href="/home/Apples">Apples</a>
+        <a href="/home/Pies">Pies</a>
+    </nav>
+
+    <h1 class="main_title">@ViewData["H1"]</h1>
+    <main class="items">
+        @RenderBody()
+    </main>
+
+    <a href="/cart"><button class="shop-cart-button"><i class="fas fa-shopping-cart"></i></button></a>
+
+    <footer>All rights reserved &copy;</footer>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

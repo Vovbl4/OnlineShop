@@ -1,0 +1,24 @@
+﻿@model List<Blog>
+@{
+    ViewData["Title"] = "Blog page";
+    ViewData["H1"] = "Page's Blog";
+}
+
+@foreach(var el in Model)
+{
+    <div class="item">
+        <h1>@el.Title</h1>
+        <p>@el.Anons</p>
+        <p>@el.FullText</p>
+
+            <form action="/blog/edit/@el.Id" method="post">
+                <input type="hidden" name="_method" value="EDIT" />
+                <button type="submit">Edit</button>
+            </form>
+        
+            <form action="/blog/delete/@el.Id" method="post">
+                <input type="hidden" name="_method" value="DELETE" />
+                <button type="submit">Delete</button>
+            </form>
+    </div>
+}

@@ -1,0 +1,12 @@
+﻿@model Item
+
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<div class="item">
+    <img src="~/img/@Model.Image" />
+    <h1>@Model.Name / @Model.Price.ToString("c")</h1>
+    <p>@Model.FullText</p>
+    <a class="buy-link" href="/cart/addtocart/@Model.Id">Add to your Cart</a>
+</div>
